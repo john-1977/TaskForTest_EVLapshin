@@ -10,19 +10,19 @@ int Cmd_Off::Pack(CONTAINER_TYPE &buf)
 {
 	_len = 0;
 	PackHeader(buf);
-	return 3 + _len; //вернуть сколько было добавлено
+	return 3 + _len; //РІРµСЂРЅСѓС‚СЊ СЃРєРѕР»СЊРєРѕ Р±С‹Р»Рѕ РґРѕР±Р°РІР»РµРЅРѕ
 }
 
 CONTAINER_TYPE::iterator Cmd_Off::Unpack(CONTAINER_TYPE &buf, CONTAINER_TYPE::iterator start)
 {
 	start = UnpackHeader(buf, start);
 
-	//так как данных в этой функции нет то start уже указывает на начало новой команды
+	//С‚Р°Рє РєР°Рє РґР°РЅРЅС‹С… РІ СЌС‚РѕР№ С„СѓРЅРєС†РёРё РЅРµС‚ С‚Рѕ start СѓР¶Рµ СѓРєР°Р·С‹РІР°РµС‚ РЅР° РЅР°С‡Р°Р»Рѕ РЅРѕРІРѕР№ РєРѕРјР°РЅРґС‹
 	return start;
 }
 
 bool Cmd_Off::execute()
-{//Так как реальной работы не производится то просто  выводится сообщение 
+{//РўР°Рє РєР°Рє СЂРµР°Р»СЊРЅРѕР№ СЂР°Р±РѕС‚С‹ РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ С‚Рѕ РїСЂРѕСЃС‚Рѕ  РІС‹РІРѕРґРёС‚СЃСЏ СЃРѕРѕР±С‰РµРЅРёРµ 
 	std::cout << "Executing cmd: OFF (0x13)." << std::endl;
 	return true;
 }

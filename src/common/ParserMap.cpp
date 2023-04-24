@@ -10,7 +10,7 @@ std::shared_ptr<iCmd> ParserMap::GetParser(BYTE type)
 {
 	auto itr = _map.find(type);
 	if (_map.end() == itr)
-	{//запрошенного парсера не существует - кинуть исключение
+	{//Р·Р°РїСЂРѕС€РµРЅРЅРѕРіРѕ РїР°СЂСЃРµСЂР° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ - РєРёРЅСѓС‚СЊ РёСЃРєР»СЋС‡РµРЅРёРµ
 		std::string err = "Can't find parser with type = " + std::to_string(type);
 		std::cout << err << std::endl;
 		throw std::logic_error(err);

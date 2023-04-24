@@ -8,8 +8,8 @@ public:
 	int Pack(CONTAINER_TYPE &buf);
 	CONTAINER_TYPE::iterator Unpack(CONTAINER_TYPE &buf, CONTAINER_TYPE::iterator start);
 	bool execute();
-	void SetColor(const BYTE r, const BYTE g, const BYTE b); //установить цвет
-	void GetColor (BYTE &r, BYTE &g, BYTE &b); //получить текущий цвет
+	void SetColor(const BYTE r, const BYTE g, const BYTE b); //СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С†РІРµС‚
+	void GetColor (BYTE &r, BYTE &g, BYTE &b); //РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ С†РІРµС‚
 protected:
 #pragma pack (push)
 #pragma pack (1)
